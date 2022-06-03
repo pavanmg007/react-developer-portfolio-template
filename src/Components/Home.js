@@ -56,7 +56,7 @@ function Home() {
   }, []);
 
   return (
-    <main className="container mx-auto max-width font-primary section md:flex justify-between items-center bg-white dark:bg-dark-mode">
+    <main className="container mx-auto max-width section md:flex justify-between items-center bg-white dark:bg-dark-mode">
       <div>
         <h1
           ref={h11}
