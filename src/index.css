@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.max-width {
+  @apply lg:mx-auto lg:px-32 xl:px-60 px-5 md:px-0;
+}
+.bg-gradient {
+  @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500;
+}
+.section {
+  @apply py-32  xl:py-32 2xl:py-48;
+}
+body {
+  max-height: 100vh;
+}
