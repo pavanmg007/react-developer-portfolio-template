@@ -11,7 +11,9 @@ function Header() {
   return (
     <header className="container mx-auto md:flex justify-between py-2 max-width">
       <div className="flex justify-between items-center py-2 md:py-10">
-        <img className="w-14" src={logo} alt="logo" />
+        <NavLink to="/">
+          <img className="w-14" src={logo} alt="logo" />
+        </NavLink>
         <div onClick={toggleClass} className="cursor-pointer">
           <svg
             className="stroke-dark-heading dark:stroke-white md:hidden"
@@ -33,19 +35,29 @@ function Header() {
       <nav className={` ${!isOpen ? "hidden" : null} text-center md:flex justify-between`}>
         <ul className="dark:text-light-content font-light md:flex items-center md:space-x-5 md:mr-10">
           <li>
-            <NavLink to="/">Home</NavLink>
+            <NavLink to="/" onClick={toggleClass}>
+              Home
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/about">About</NavLink>
+            <NavLink to="/about" onClick={toggleClass}>
+              About
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/technologies">Technologies</NavLink>
+            <NavLink to="/technologies" onClick={toggleClass}>
+              Technologies
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/projects">Projects</NavLink>
+            <NavLink to="/projects" onClick={toggleClass}>
+              Projects
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/contact">Contact</NavLink>
+            <NavLink to="/contact" onClick={toggleClass}>
+              Contact
+            </NavLink>
           </li>
         </ul>
         <ul className="flex justify-evenly items-center my-5 md:my-0 md:space-x-5 md:mr-5">
