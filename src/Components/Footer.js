@@ -5,7 +5,7 @@ function Footer() {
       <p className="text-xs text-center text-dark-content dark:text-light-content w-full">
         Designed and Coded by{" "}
         <a
-          className="text-red-600"
+          className="font-medium"
           href="https://pavanmg.in"
           target="_blank"
           rel="noreferrer noopener"
@@ -13,8 +13,8 @@ function Footer() {
           Pavan MG
         </a>{" "}
         with
-        <span className="text-gradient"> Love</span> &
-        <span className="bg-clip-text bg-gradient text-transparent"> Coffee</span>
+        <span className="text-gradient font-medium"> Love</span> &
+        <span className="text-gradient font-medium"> Coffee</span>
       </p>
     </footer>
   );

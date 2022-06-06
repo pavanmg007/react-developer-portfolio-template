@@ -1,12 +1,17 @@
-import logo from "./assets/logo.svg";
-import profile from "./assets/pavanmg.jpg";
+import logogradient from "./assets/logo.svg";
+import logo from "./assets/logo2.svg";
+import profile from "./assets/profile.jpg";
+
+// Logos
+export const logos = {
+  logogradient: logogradient,
+  logo: logo,
+};
 
 // Enter your Personal Details here
 export const personalDetails = {
-  logo: logo,
   name: "Pavan MG",
   tagline: "I build things for web",
-  email: "hi@pavanmg.in",
   img: profile,
   about: `The Generator App is an online tool that helps you to export ready-made templates ready to
   work as your future website. It helps you to combine slides, panels and other components
@@ -63,3 +68,9 @@ export const eduDetails = [
     Duration: "Aug 2015 - Dec 2020",
   },
 ];
+
+// Enter your Contact Details here
+export const contactDetails = {
+  email: "hi@pavanmg.in",
+  phone: "+91 81519 16187",
+};
