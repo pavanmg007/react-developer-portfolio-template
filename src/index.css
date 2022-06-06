@@ -4,14 +4,20 @@
 @tailwind utilities;
 
 .max-width {
-  @apply lg:mx-auto lg:px-32 xl:px-60 px-5 md:px-0;
+  @apply lg:mx-auto lg:px-24 xl:px-48 px-5;
 }
 .bg-gradient {
-  @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500;
+  @apply bg-gradient-to-r from-sky-500 via-purple-500 to-pink-600;
 }
 .section {
-  @apply py-32  xl:py-32 2xl:py-48;
+  @apply pt-28 xl:pt-28 2xl:pt-44;
+}
+.text-content {
+  @apply dark:text-light-content text-dark-content;
 }
 body {
-  max-height: 100vh;
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  display: none;
 }

@@ -74,7 +74,7 @@ function Home() {
           ref={h13}
           className="text-2xl text-dark-heading dark:text-light-heading md:text-4xl xl:text-5xl xl:leading-tight font-bold"
         >
-          I build things for web{" "}
+          I build things for web
         </h2>
       </div>
       <div className="mt-5 md:mt-0">
