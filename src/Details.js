@@ -71,6 +71,6 @@ export const eduDetails = [
 
 // Enter your Contact Details here
 export const contactDetails = {
-  email: "hi@pavanmg.in",
-  phone: "+91 81519 16187",
+  email: "hi@example.com",
+  phone: "+91 12345 67890",
 };
