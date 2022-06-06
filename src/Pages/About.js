@@ -1,6 +1,6 @@
 import React from "react";
 import Work from "../Components/Work";
-import { workDetails, eduDetails } from "../Experince";
+import { personalDetails, workDetails, eduDetails } from "../Details";
 
 function About() {
   return (
@@ -9,23 +9,19 @@ function About() {
         <h1 className="text-2xl text-dark-heading dark:text-light-heading md:text-4xl xl:text-5xl xl:leading-tight font-bold">
           About Me
         </h1>
-        <p className="text-content py-8 lg:max-w-3xl">
-          The Generator App is an online tool that helps you to export ready-made templates ready to
-          work as your future website. It helps you to combine slides, panels and other components
-          and export it as a set of static files: HTML/CSS/JS.
-        </p>
+        <p className="text-content py-8 lg:max-w-3xl">{personalDetails.about}</p>
       </section>
       <section>
         <h1 className="text-2xl text-dark-heading dark:text-light-heading md:text-4xl xl:text-5xl xl:leading-tight font-bold">
           Work Experience
         </h1>
-        {workDetails.map((work, i) => (
+        {workDetails.map(({ Position, Company, Location, Type, Duration }, i) => (
           <Work
-            position={work.Position}
-            company={work.Company}
-            location={work.Location}
-            type={work.Type}
-            duration={work.Duration}
+            position={Position}
+            company={Company}
+            location={Location}
+            type={Type}
+            duration={Duration}
             key={i}
           />
         ))}
@@ -34,13 +30,13 @@ function About() {
         <h1 className="text-2xl pt-10 text-dark-heading dark:text-light-heading md:text-4xl xl:text-5xl xl:leading-tight font-bold">
           Education
         </h1>
-        {eduDetails.map((work, i) => (
+        {eduDetails.map(({ Position, Company, Location, Type, Duration }, i) => (
           <Work
-            position={work.Position}
-            company={work.Company}
-            location={work.Location}
-            type={work.Type}
-            duration={work.Duration}
+            position={Position}
+            company={Company}
+            location={Location}
+            type={Type}
+            duration={Duration}
             key={i}
           />
         ))}

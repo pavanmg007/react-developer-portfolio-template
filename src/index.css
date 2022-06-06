@@ -9,6 +9,9 @@
 .bg-gradient {
   @apply bg-gradient-to-r from-sky-500 via-purple-500 to-pink-600;
 }
+.text-gradient {
+  @apply bg-clip-text bg-gradient text-transparent;
+}
 .section {
   @apply pt-28 xl:pt-28 2xl:pt-44;
 }

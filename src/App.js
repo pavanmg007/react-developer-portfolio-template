@@ -9,7 +9,6 @@ import Technologies from "./Pages/Technologies";
 function App() {
   return (
     <div className="dark">
-      <div className="bg-white dark:bg-dark-mode font-primary">
         <Router>
           <Header />
           <Routes>
@@ -21,7 +20,6 @@ function App() {
           </Routes>
           <Footer />
         </Router>
-      </div>
     </div>
   );
 }

@@ -13,7 +13,7 @@ function Work({ position, company, location, type, duration }) {
         <div className="flex flex-col md:flex-row">
           <div className="flex items-center pr-5">
             <svg
-              className="dark:fill-light-heading fill-dark-heading"
+              className="dark:fill-light-heading fill-dark-heading min-w-fit"
               width="16"
               height="12"
               viewBox="0 0 16 12"
@@ -26,7 +26,7 @@ function Work({ position, company, location, type, duration }) {
           </div>
           <div className="flex items-center">
             <svg
-              className="dark:fill-light-heading fill-dark-heading"
+              className="dark:fill-light-heading fill-dark-heading min-w-fit"
               width="16"
               height="12"
               viewBox="0 0 16 12"

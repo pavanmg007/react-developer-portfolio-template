@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../assets/logo.svg";
+import { personalDetails, socialMediaUrl } from "../Details";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const { linkdein, github, twitter } = socialMediaUrl;
   const toggleClass = () => {
     setIsOpen(!isOpen);
   };
@@ -12,7 +13,7 @@ function Header() {
     <header className="container mx-auto md:flex justify-between py-2 max-width">
       <div className="flex justify-between items-center py-2 md:py-10">
         <NavLink to="/">
-          <img className="w-14" src={logo} alt="logo" />
+          <img className="w-14" src={personalDetails.logo} alt="logo" />
         </NavLink>
         <div onClick={toggleClass} className="cursor-pointer">
           <svg
@@ -62,7 +63,7 @@ function Header() {
         </ul>
         <ul className="flex justify-evenly items-center my-5 md:my-0 md:space-x-5 md:mr-5">
           <li>
-            <a href="https://twitter.com/pavanmg007" target="_blank" rel="noreferrer noopener">
+            <a href={twitter} target="_blank" rel="noreferrer noopener">
               <svg
                 className="dark:fill-light-heading fill-dark-heading"
                 width="32"
@@ -76,7 +77,7 @@ function Header() {
             </a>
           </li>
           <li>
-            <a href="https://linkedin.com/in/pavanmg007" target="_blank" rel="noreferrer noopener">
+            <a href={linkdein} target="_blank" rel="noreferrer noopener">
               <svg
                 className="dark:fill-light-heading fill-dark-heading"
                 width="30"
@@ -90,7 +91,7 @@ function Header() {
             </a>
           </li>
           <li>
-            <a href="https://github.com/pavanmg007" target="_blank" rel="noreferrer noopener">
+            <a href={github} target="_blank" rel="noreferrer noopener">
               <svg
                 className="dark:fill-light-heading fill-dark-heading"
                 width="30"

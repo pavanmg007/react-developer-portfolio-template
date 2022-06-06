@@ -1,15 +1,22 @@
 import React from "react";
-
 function Footer() {
   return (
     <footer className="container mx-auto py-1 fixed bottom-0 md:left-20 bg-white dark:bg-dark-mode">
       <p className="text-xs text-center text-dark-content dark:text-light-content w-full">
-        Designed and Coded by Pavan MG with
-        <span className="bg-clip-text bg-gradient text-transparent"> Love</span> &
+        Designed and Coded by{" "}
+        <a
+          className="text-red-600"
+          href="https://pavanmg.in"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          Pavan MG
+        </a>{" "}
+        with
+        <span className="text-gradient"> Love</span> &
         <span className="bg-clip-text bg-gradient text-transparent"> Coffee</span>
       </p>
     </footer>
   );
 }
-
 export default Footer;
