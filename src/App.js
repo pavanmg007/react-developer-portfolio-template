@@ -8,8 +8,8 @@ import Projects from "./Pages/Projects";
 import Technologies from "./Pages/Technologies";
 function App() {
   return (
-    <div className="">
-      <div className="bg-white dark:bg-dark-mode h-screen font-primary">
+    <div className="dark">
+      <div className="bg-white dark:bg-dark-mode font-primary">
         <Router>
           <Header />
           <Routes>
