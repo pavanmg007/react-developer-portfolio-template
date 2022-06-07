@@ -2,7 +2,7 @@ import React from "react";
 import {techStackDetails} from "../Details"
 
 function Technologies() {
-const {html,css,js,react,redux,tailwind,bootstrap,sass,vscode,git,github,npm,postman}= techStackDetails
+const {html,css,js,react,redux,tailwind,bootstrap,sass,vscode,git,github,npm,postman,figma}= techStackDetails
   return (
     <main className="container mx-auto max-width py-20 ">
       <section>
@@ -13,7 +13,7 @@ const {html,css,js,react,redux,tailwind,bootstrap,sass,vscode,git,github,npm,pos
           Technologies I've been working with recently
         </p>
       </section>
-      <section className="grid grid-cols-4 md:grid-cols-5 items-center gap-10 pt-6">
+      <section className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-6 items-center gap-10 pt-6">
         <img src={html} title="html" alt="" />
         <img src={css} title="CSS" alt="" />
         <img src={js} title="JavaScript" alt="" />
@@ -28,10 +28,11 @@ const {html,css,js,react,redux,tailwind,bootstrap,sass,vscode,git,github,npm,pos
           Tools
         </h1>
       </section>
-      <section className="grid grid-cols-4 md:grid-cols-5 items-center gap-10 pt-6">
+      <section className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-6 items-center gap-10 pt-6">
         <img src={vscode} title="Visual Studio Code" alt="" />
         <img src={git} alt="Git" />
         <img src={github} alt="Github" />
+        <img src={figma} alt="Figma" />
         <img src={npm} alt="NPM" />
         <img src={postman} alt="Postman" />
       </section>
