@@ -1,6 +1,9 @@
+// Logo images
 import logogradient from "./assets/logo.svg";
 import logo from "./assets/logo2.svg";
+// Profile Image
 import profile from "./assets/profile.jpg";
+// Tech stack images
 import html from "./assets/techstack/html.png";
 import css from "./assets/techstack/css.png";
 import sass from "./assets/techstack/sass.png";
@@ -15,6 +18,13 @@ import git from "./assets/techstack/git.png";
 import npm from "./assets/techstack/npm.png";
 import postman from "./assets/techstack/postman.png";
 import figma from "./assets/techstack/figma.png";
+// Porject Images
+import projectImage1 from "./assets/projects/project1.jpg";
+import projectImage2 from "./assets/projects/project2.jpg";
+import projectImage3 from "./assets/projects/project3.jpg";
+import projectImage4 from "./assets/projects/project4.jpg";
+import projectImage5 from "./assets/projects/project5.jpg";
+import projectImage6 from "./assets/projects/project6.jpg";
 
 // Logos
 export const logos = {
@@ -27,41 +37,39 @@ export const personalDetails = {
   name: "Pavan MG",
   tagline: "I build things for web",
   img: profile,
-  about: `The Generator App is an online tool that helps you to export ready-made templates ready to
-  work as your future website. It helps you to combine slides, panels and other components
-  and export it as a set of static files: HTML/CSS/JS.`,
+  about: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
 };
 
 // Enter your Social Media URLs here
 export const socialMediaUrl = {
-  linkdein: "https://www.linkedin.com/in/pavanmg007/",
-  github: "https://www.github.com/pavanmg007",
-  twitter: "https://twitter.com/pavanmg007",
-  instagram: "https://www.instagram.com/pavanmg007/",
+  linkdein: "https://www.linkedin.com/",
+  github: "https://www.github.com/",
+  twitter: "https://twitter.com/",
+  instagram: "https://www.instagram.com/",
 };
 
 // Enter your Work Experience here
 export const workDetails = [
   {
-    Position: "Junior Web Developer",
-    Company: `Dr. Rajumar's Learning App`,
+    Position: "Frontend Web Developer",
+    Company: `Company Name here`,
     Location: "Bengaluru",
     Type: "Full Time",
     Duration: "Sep 2021 - Dec 2021",
   },
   {
-    Position: "Web development Intern",
-    Company: `IonPixelz Web Solutions`,
+    Position: "Internship",
+    Company: `Company Name here`,
     Location: "Bengaluru",
     Type: "Internship",
-    Duration: "June 2021 - Aug 2021",
+    Duration: "Sep 2021 - Dec 2021",
   },
   {
-    Position: "SEO & SEM Specialist",
-    Company: `HAAPS`,
+    Position: "Internship",
+    Company: `Company Name here`,
     Location: "Bengaluru",
-    Type: "Full Time",
-    Duration: "Aug 2020 - Jul 2021",
+    Type: "Internship",
+    Duration: "Sep 2021 - Dec 2021",
   },
 ];
 
@@ -76,10 +84,10 @@ export const eduDetails = [
   },
   {
     Position: "Bachelor in Electronics & Communication",
-    Company: `Bangalore Institute of Technology`,
+    Company: `Your College Name here`,
     Location: "Bengaluru",
     Type: "Full Time",
-    Duration: "Aug 2015 - Dec 2020",
+    Duration: "Aug 2020 - Present",
   },
 ];
 
@@ -98,8 +106,66 @@ export const techStackDetails = {
   npm: npm,
   git: git,
   github: github,
-  figma: figma
+  figma: figma,
 };
+
+// Enter your Project Details here
+export const projectDetails = [
+  {
+    title: "Project title 1",
+    image: projectImage1,
+    description: `This is sample project description random things are here in description This is sample
+project lorem ipsum generator for dummy content`,
+    techstack: "HTML/CSS, JavaScript",
+    previewLink: "https://google.com",
+    githubLink: "https://github.com",
+  },
+  {
+    title: "Project title 2",
+    image: projectImage2,
+    description: `This is sample project description random things are here in description This is sample
+project lorem ipsum generator for dummy content`,
+    techstack: "HTML/CSS, JavaScript",
+    previewLink: "https://google.com",
+    githubLink: "https://github.com",
+  },
+  {
+    title: "Project title 3",
+    image: projectImage3,
+    description: `This is sample project description random things are here in description This is sample
+project lorem ipsum generator for dummy content`,
+    techstack: "HTML/CSS, JavaScript",
+    previewLink: "https://google.com",
+    githubLink: "https://github.com",
+  },
+  {
+    title: "Project title 4",
+    image: projectImage4,
+    description: `This is sample project description random things are here in description This is sample
+project lorem ipsum generator for dummy content`,
+    techstack: "HTML/CSS, JavaScript",
+    previewLink: "https://google.com",
+    githubLink: "https://github.com",
+  },
+  {
+    title: "Project title 5",
+    image: projectImage5,
+    description: `This is sample project description random things are here in description This is sample
+project lorem ipsum generator for dummy content`,
+    techstack: "HTML/CSS, JavaScript",
+    previewLink: "https://google.com",
+    githubLink: "https://github.com",
+  },
+  {
+    title: "Project title 6",
+    image: projectImage6,
+    description: `This is sample project description random things are here in description This is sample
+project lorem ipsum generator for dummy content`,
+    techstack: "HTML/CSS, JavaScript",
+    previewLink: "https://google.com",
+    githubLink: "https://github.com",
+  },
+];
 
 // Enter your Contact Details here
 export const contactDetails = {

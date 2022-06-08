@@ -34,23 +34,23 @@ function Header() {
         </div>
       </div>
       <nav className={` ${!isOpen ? "hidden" : null} text-center md:flex justify-between`}>
-        <ul className="dark:text-light-content font-light md:flex items-center md:space-x-5 md:mr-10">
-          <li>
+        <ul className="dark:text-light-content font-medium md:flex items-center md:space-x-5 md:mr-10">
+          <li className="pb-1 md:pb-0">
             <NavLink to="/" onClick={toggleClass}>
               Home
             </NavLink>
           </li>
-          <li>
+          <li className="pb-1 md:pb-0">
             <NavLink to="/about" onClick={toggleClass}>
               About
             </NavLink>
           </li>
-          <li>
+          <li className="pb-1 md:pb-0">
             <NavLink to="/technologies" onClick={toggleClass}>
               Technologies
             </NavLink>
           </li>
-          <li>
+          <li className="pb-1 md:pb-0">
             <NavLink to="/projects" onClick={toggleClass}>
               Projects
             </NavLink>
