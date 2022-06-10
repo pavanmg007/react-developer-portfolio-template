@@ -15,31 +15,33 @@ function About() {
         <h1 className="text-2xl text-dark-heading dark:text-light-heading md:text-4xl xl:text-5xl xl:leading-tight font-bold">
           Work Experience
         </h1>
-        {workDetails.map(({ Position, Company, Location, Type, Duration }, i) => (
-          <Work
-            position={Position}
-            company={Company}
-            location={Location}
-            type={Type}
-            duration={Duration}
-            key={i}
-          />
-        ))}
+        {React.Children.toArray(
+          workDetails.map(({ Position, Company, Location, Type, Duration }) => (
+            <Work
+              position={Position}
+              company={Company}
+              location={Location}
+              type={Type}
+              duration={Duration}
+            />
+          ))
+        )}
       </section>
       <section>
         <h1 className="text-2xl pt-10 text-dark-heading dark:text-light-heading md:text-4xl xl:text-5xl xl:leading-tight font-bold">
           Education
         </h1>
-        {eduDetails.map(({ Position, Company, Location, Type, Duration }, i) => (
-          <Work
-            position={Position}
-            company={Company}
-            location={Location}
-            type={Type}
-            duration={Duration}
-            key={i}
-          />
-        ))}
+        {React.Children.toArray(
+          eduDetails.map(({ Position, Company, Location, Type, Duration }) => (
+            <Work
+              position={Position}
+              company={Company}
+              location={Location}
+              type={Type}
+              duration={Duration}
+            />
+          ))
+        )}
       </section>
     </main>
   );
