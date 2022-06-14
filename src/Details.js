@@ -1,3 +1,4 @@
+// Enter all your detials in this file
 // Logo images
 import logogradient from "./assets/logo.svg";
 import logo from "./assets/logo2.svg";
