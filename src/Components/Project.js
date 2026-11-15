@@ -3,7 +3,7 @@ import React from "react";
 function Project({ title, image, description, techstack, previewLink, githubLink }) {
   return (
     <article className="rounded-xl mt-10 overflow-hidden shadow-xl shadow-slate-300 dark:shadow-slate-900">
-      <img src={image} alt="" loading="lazy" />
+      {image && <img src={image} alt="" loading="lazy" />}
       <div className="dark:bg-dark-card p-4">
         <h1 className="dark:text-light-heading font-semibold text-lg pt-1">{title}</h1>
         <p className="text-content pt-4 font-light">{description}</p>
@@ -11,6 +11,7 @@ function Project({ title, image, description, techstack, previewLink, githubLink
           Tech Stack : <span className="font-light">{techstack}</span>
         </h3>
         <div className="flex justify-between items-center mt-5">
+          {previewLink ? (
           <div className="flex items-center">
             <svg
               className="stroke-dark-heading dark:stroke-white inline-block min-w-fit"
@@ -42,6 +43,7 @@ function Project({ title, image, description, techstack, previewLink, githubLink
               Demo
             </a>
           </div>
+          ) : <span />}
           <div className="flex items-center">
             <svg
               className="dark:fill-light-heading fill-dark-heading inline-block min-w-fit"

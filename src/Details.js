@@ -26,6 +26,10 @@ import projectImage2 from "./assets/projects/project2.png";
 import projectImage3 from "./assets/projects/project3.jpg";
 import projectImage4 from "./assets/projects/project4.jpg";
 import projectImage5 from "./assets/projects/project5.png";
+import dumeImage from "./assets/projects/dume.jpg";
+import hoppyImage from "./assets/projects/hoppy.gif";
+import telloImage from "./assets/projects/tello.png";
+import puzzlebotImage from "./assets/projects/puzzlebot.jpg";
 
 // Logos
 export const logos = {
@@ -36,9 +40,9 @@ export const logos = {
 // Enter your Personal Details here
 export const personalDetails = {
   name: "José Domínguez",
-  tagline: "Robotics Engineer & Software Developer",
+  tagline: "Robotics Engineer, Motion Planning and Manipulation",
   img: profile,
-  about: `Robotics and Digital Systems Engineering student at Tecnológico de Monterrey, passionate about developing complex software solutions. With experience in service robotics, AI-powered detection systems, and full-stack development, I seek to apply my skills to create innovative and high-impact technology.`,
+  about: `I study Robotics and Digital Systems Engineering at Tecnológico de Monterrey and graduate in June 2027. My work is on motion planning and manipulation. In RoBorregos @Home, our RoboCup@Home team, I lead manipulation and co-manage the team, and I integrated the VAMP motion planner into our MoveIt stack. Since September 2026 I am also a research intern at the CNRS-AIST Joint Robotics Laboratory in Tsukuba, Japan, where I work on humanoid teleoperation.`,
 };
 
 // Enter your Social Media URLs here
@@ -51,14 +55,47 @@ export const socialMediaUrl = {
 // Enter your Work Experience here
 export const workDetails = [
   {
-    Position: "Software Engineering Intern On Campus",
-    Company: `Tecnológico de Monterrey (ITESM)`,
+    Position: "Research Intern, Humanoid Teleoperation",
+    Company: `CNRS-AIST Joint Robotics Laboratory (JRL)`,
+    Location: "Tsukuba, Japan",
+    Type: "Research",
+    Duration: "September 2026 - Present",
+    Description: [
+      "Porting the operator interface of the lab's avatar system, which lets a person teleoperate a humanoid robot, from Unity to Unreal Engine. The robot side runs on mc_rtc, a QP-based whole-body controller.",
+      "Writing the layer that brings the robot model from mc_rtc into Unreal: kinematic tree, inertia and collision geometry, converted to the engine's coordinate frames.",
+    ],
+  },
+  {
+    Position: "Technology Developer, Robotics",
+    Company: `Experiencias ZION`,
+    Location: "Monterrey, NL, Mexico",
+    Type: "Contract",
+    Duration: "July 2026 - August 2026",
+    Description: [
+      "Found why the motion-capture imitation policies for the Unitree G1 EDU humanoid were not ready for the robot: they had never seen sensor delay. Retrained with delayed observations, and falls in simulation dropped from 92% to 2% on a walk with one step of delay.",
+      "Trained a walking policy with reinforcement learning (mjlab, MuJoCo Warp), checked it in a second simulator, and ran the first walking tests on the real robot through low-level joint control.",
+      "Built person following so the humanoid can walk with guests at client events: moving the detector to the GPU with TensorRT took it from 3.5 to 129 detections per second, and a separate LiDAR check stops it whenever someone is within 1 m. Also built the cloud voice assistant it uses to talk with them.",
+    ],
+  },
+  {
+    Position: "Software Engineering Intern, then Research Intern in computer vision",
+    Company: `Tecnológico de Monterrey, Smart Cities R&D`,
     Location: "Monterrey, NL, Mexico",
     Type: "Internship",
-    Duration: "August 2024 - Present",
-     Description: [
-      "Developed a person detection and tracking system using YOLOv8 and PyTorch, achieving over 400,000 detections to enhance public safety.",
-      "Deployed a secure IoT network with 30+ cameras and sensors using LoRaWAN and 5G for real-time monitoring.",
+    Duration: "August 2024 - July 2026",
+    Description: [
+      "Adapted CountGD, an open-set counting model built on Grounding DINO, to count trash in street camera images, both piled-up and single items, for a waste collection system.",
+      "Built camera and sensor systems for the group's smart-city projects: YOLOv8 person tracking with dwell-time analytics on Azure, and a LoRaWAN sensor network at a partner school with STM32 nodes and a Jetson gateway.",
+    ],
+  },
+  {
+    Position: "Full-Stack Developer (Social Service)",
+    Company: `The Gate Education`,
+    Location: "Monterrey, NL, Mexico",
+    Type: "Social service",
+    Duration: "November 2025 - April 2026",
+    Description: [
+      "Built the company's production website with one other engineer (Next.js, React, TypeScript, AWS Lambda).",
     ],
   },
   {
@@ -68,8 +105,7 @@ export const workDetails = [
     Type: "Internship",
     Duration: "October 2024 - March 2025",
     Description: [
-      "Developed and published a web scraping platform wrapper for Puppeteer and Playwright on npm for internal team use.",
-      "Built data pipelines to process public fiscal data, utilizing SQL Server, Azure Blob Storage, Express, and Docker.",
+      "Built Dagster pipelines that processed over 1 TB of Mexican government fiscal data, and an internal npm package the team used for its web scrapers.",
     ],
   },
 ];
@@ -146,11 +182,41 @@ export const techStackDetails = {
 // Enter your Project Details here
 export const projectDetails = [
   {
-    title: "BonTable (SaaS Restaurant Platform)",
-    image: projectImage1,
-    description: `Architected a full-stack SaaS web app to modernize the dining experience, featuring an admin dashboard for CRUD menu management and a public interface for reservations.`,
-    techstack: "React, Vite, Tailwind CSS, Firebase",
-    githubLink: "https://github.com/JLDominguezM/BonTable",
+    title: "RoBorregos @Home: VAMP planner and Pick and Place (RoboCup@Home)",
+    image: projectImage3,
+    description: `Integrated VAMP, a motion planner that runs RRT-Connect with vectorized collision checking, into MoveIt for FRIDA, the team's home service robot with an xArm 6. It works as a C++ planner plugin backed by a Python planning server, and every plan is re-checked against the real meshes with FCL, falling back to OMPL when the sphere model misses a collision. I also built the Pick and Place task for RoboCup@Home 2026: a grasp pipeline built on GPD (Grasp Pose Detection) with multi-threaded point-cloud filtering on the robot's Jetson Orin, which completed 16 of 20 end-to-end picks in cluttered scenes. As manipulation leader and co-project manager of a 20+ member team, I helped win 1st place at TMR 2026 and 9th at RoboCup 2026.`,
+    techstack: "ROS 2, C++, Python, MoveIt, VAMP, OMPL, GPD",
+    previewLink: "https://athome.roborregos.com/Overview/Media/",
+    githubLink: "https://github.com/RoBorregos/home2",
+  },
+  {
+    image: dumeImage,
+    title: "Dum-E: Vision-Language-Action Manipulation",
+    description: `Compared SmolVLA with an ACT baseline on two SO-101 arms that learned to sort objects by color from teleoperated demonstrations. Recorded and published a 232-episode dataset (LeRobot v3, Hugging Face) with two cameras at 30 fps, then redesigned and 3D-printed longer gripper tips and fine-tuned the policy for them.`,
+    techstack: "LeRobot, SmolVLA, ACT, Python",
+    githubLink: "https://github.com/armandomm09/dume",
+  },
+  {
+    image: hoppyImage,
+    title: "HOPPY: One-Legged Hopping Robot, Sim-to-Real",
+    description: `Redesigned the leg of the open-source HOPPY kit (UIUC) and modeled it in MuJoCo three times, each closer to the real hardware, with the same 1 kHz flight/stance controller and the motor electromechanics. The model matched the original paper's simulator on 12 of 12 checks. On the real robot: 64 jumps in a row without help, with 0.27 s of flight time against 0.25 s in simulation.`,
+    techstack: "MuJoCo, C2000, SolidWorks",
+    githubLink: "https://github.com/JLDominguezM/HOPPY-Project",
+  },
+  {
+    image: telloImage,
+    title: "Tello Visual Servoing: Drone Control from Camera Images",
+    description: `Controlled a DJI Tello over raw UDP, without the SDK, and built an image-based visual servoing mission: HSV detection feeds a PD controller on yaw and throttle, and a state machine runs the phases of the inspection.`,
+    techstack: "Python, OpenCV, UDP",
+    previewLink: "https://youtu.be/uXXDjiPWrlk",
+    githubLink: "https://github.com/JLDominguezM/tello-drone-labs",
+  },
+  {
+    image: puzzlebotImage,
+    title: "Puzzlebot: Autonomous Navigation with Traffic Signs",
+    description: `A small robot that follows a line and obeys traffic lights. I restructured the code as a ROS 2 workspace, wrote the closed-loop PID waypoint controller and its tuner, calibrated the wheel radius, and made the speed follow the traffic light (stop, slow, go).`,
+    techstack: "ROS 2, Python, PID control",
+    githubLink: "https://github.com/htovarm7/Puzzlebot-Challenge",
   },
   {
     title: "Emergency Act (1st Place Waymo Challenge)",
@@ -161,14 +227,6 @@ export const projectDetails = [
     githubLink: "https://github.com/JocelynVelarde/Shell-Hacks-2024",
   },
   {
-    title: "Roborregos RoboCup @HOME",
-    image: projectImage3,
-    description: `Co-led the team's migration to ROS2 and developed advanced manipulation algorithms using MoveIt to perform complex pick, place, and pour tasks for a service robot.`,
-    techstack: "ROS2, C++, Python, MoveIt Framework",
-    previewLink: "https://athome.roborregos.com/Overview/Media/",
-    githubLink: "https://github.com/RoBorregos/home2",
-  },
-  {
     title: "RoboCup Rescue Maze Challenge",
     image: projectImage4,
     description: `Developed an autonomous robot to navigate hazardous mazes and identify victims using visual markers. Implemented PID controllers and sensor data filters for precise motion control.`,
@@ -177,14 +235,20 @@ export const projectDetails = [
     githubLink: "https://github.com/RoBorregos/RescueMaze2024",
   },
   {
+    title: "BonTable (SaaS Restaurant Platform)",
+    image: projectImage1,
+    description: `Architected a full-stack SaaS web app to modernize the dining experience, featuring an admin dashboard for CRUD menu management and a public interface for reservations.`,
+    techstack: "React, Vite, Tailwind CSS, Firebase",
+    githubLink: "https://github.com/JLDominguezM/BonTable",
+  },
+  {
     title: "Habits365 (Oracle Challenge at HackMty)",
-    image: projectImage5, 
+    image: projectImage5,
     description: `Developed a Progressive Web App (PWA) for habit tracking, using Python scripts for personalized location-based reminders and a custom user authentication system.`,
     techstack: "Oracle APEX, SQL, Python, HTML/CSS",
-    previewLink: "https://oracleapex.com/ords/r/chartank2_0/habits365/login?session=5967221203109", // Agrega el enlace si tienes uno
-    githubLink: "https://github.com/JLDominguezM/Habits365", // Cambia al repo correcto
+    previewLink: "https://oracleapex.com/ords/r/chartank2_0/habits365/login?session=5967221203109",
+    githubLink: "https://github.com/JLDominguezM/Habits365",
   },
-
 ];
 
 export const communityDetails = [
@@ -215,22 +279,13 @@ export const communityDetails = [
 ];
 
 export const awardDetails = [
-  {
-    place: "1st Place",
-    event: "Waymo Challenge @ ShellHacks (Florida)",
-  },
-  {
-    place: "6th International Place",
-    event: "@HOME RoboCup (Brazil)",
-  },
-  {
-    place: "2nd National Place",
-    event: "@HOME-TMR (Mexico) ",
-  },
-  {
-    place: "2nd National Place",
-    event: "RCMJ-TMR (Mexico)",
-  },
+  { place: "1st Place", event: "National @Home, Mexican Robotics Tournament (TMR) 2026" },
+  { place: "9th Place", event: "International @Home, RoboCup (South Korea) 2026" },
+  { place: "2nd Place", event: "National @Home, Mexican Robotics Tournament (TMR) 2025" },
+  { place: "6th Place", event: "International @Home, RoboCup (Brazil) 2025" },
+  { place: "2nd Place", event: "Banorte Challenge, HackMTY (1000+ participants) 2025" },
+  { place: "1st Place", event: "Waymo Challenge, ShellHacks (Florida, USA) 2024" },
+  { place: "2nd Place", event: "National Rescue Maze Jr, Mexican Robotics Tournament (TMR) 2024" },
 ];
 
 // Enter your Contact Details here

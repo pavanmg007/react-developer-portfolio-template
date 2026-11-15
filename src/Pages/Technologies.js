@@ -35,6 +35,30 @@ function Technologies() {
         </div>
       </section>
 
+      {/* ROBOTICS */}
+      <section className="pt-10">
+        <h1 className="text-2xl text-dark-heading dark:text-light-heading md:text-4xl xl:text-5xl xl:leading-tight font-bold">
+          Robotics
+        </h1>
+        <p className="text-content py-2 lg:max-w-3xl">
+          Planning, control, learning and the hardware I have used them on.
+        </p>
+        <div className="flex flex-wrap gap-3 pt-6">
+          {[
+            "ROS 2", "MoveIt", "VAMP", "OMPL", "GPD", "mc_rtc", "MuJoCo", "MuJoCo Warp", "mjlab",
+            "Unreal Engine", "LeRobot", "SmolVLA", "TensorRT", "Isaac Sim", "Gazebo",
+            "Unitree G1", "Unitree Go2", "xArm 6", "SO-101", "Jetson", "STM32", "C2000", "Raspberry Pi",
+          ].map((name) => (
+            <span
+              key={name}
+              className="text-content font-light border border-slate-300 dark:border-slate-600 rounded-full px-4 py-1"
+            >
+              {name}
+            </span>
+          ))}
+        </div>
+      </section>
+
       {/* 2. SECCIÓN DE TECNOLOGÍAS */}
       <section className="pt-10">
         <h1 className="text-2xl text-dark-heading dark:text-light-heading md:text-4xl xl:text-5xl xl:leading-tight font-bold">
